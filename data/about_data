@@ -1,6 +1,13 @@
-v.230823 - All raw data merged
+v.230823 - All raw data merged.
+
+seceni-headers - header data
 Plot IDs added to all plots and sites.
-  
-Before using: 
-remove plots with area 10 m2 (filter area = 25); 
-remove subplot ID (needed just when using 10 m2 and 25 m2)
+
+seceni-releves - vegetation plots
+Nomenclature not harmonised. 
+Woody species in different layers (S, H, juv., seedl) - possibly shrub layer was considered differently in different datasets (DB - shrub layer >50 cm)
+
+Before using releve data: 
+remove 10 m2 plots (area = "10"); 
+remove 'subplot' (needed just when using 10 m2 and 25 m2);
+remove 'comment' (remarks on plants in herbarium)
