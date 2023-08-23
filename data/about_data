@@ -1,0 +1,6 @@
+v.230823 - All raw data merged
+Plot IDs added to all plots and sites.
+  
+Before using: 
+remove plots with area 10 m2 (filter area = 25); 
+remove subplot ID (needed just when using 10 m2 and 25 m2)
