@@ -1,0 +1,504 @@
+n,species_original,species_corrected,taxon_pladias,Light,Temperature,Moisture,Reaction,Nutrients,Salinity,woody_plant
+1,Acer campestre,Acer campestre,Acer campestre,5,6,5,7,6,0,1
+2,Acer cf. pseudoplatanus,Acer pseudoplatanus,Acer pseudoplatanus,4,5,6,6,7,0,1
+3,Acer pseudoplatanus,Acer pseudoplatanus,Acer pseudoplatanus,4,5,6,6,7,0,1
+4,Acer sp.,Acer sp.,NA,NA,NA,NA,NA,NA,NA,1
+5,Achillea cf. collina,Achillea millefolium agg.,Achillea millefolium agg.,7,5,5,6,5,1,0
+6,Achillea cf. pannonica,Achillea millefolium agg.,Achillea millefolium agg.,7,5,5,6,5,1,0
+7,Achillea cf. setacea,Achillea millefolium agg.,Achillea millefolium agg.,7,5,5,6,5,1,0
+8,Achillea millefolium agg.,Achillea millefolium agg.,Achillea millefolium agg.,7,5,5,6,5,1,0
+9,Achillea pannonica,Achillea millefolium agg.,Achillea millefolium agg.,7,5,5,6,5,1,0
+10,Acinos arvensis,Acinos arvensis,Acinos arvensis,9,7,2,7,2,0,0
+11,Adonis vernalis,Adonis vernalis,Adonis vernalis,8,7,3,8,2,0,0
+12,Agrimonia eupatoria,Agrimonia eupatoria,Agrimonia eupatoria,7,6,4,8,4,1,0
+13,Agrostis capillaris,Agrostis capillaris,Agrostis capillaris,7,5,4,4,4,0,0
+14,Ajuga genevensis,Ajuga genevensis,Ajuga genevensis,7,6,4,7,3,0,0
+15,Allium cf. oleraceum,Allium oleraceum,Allium oleraceum,6,6,4,7,4,0,0
+16,Allium cf. rotundum,Allium rotundum,Allium rotundum,7,7,4,8,4,0,0
+17,Allium cf. sphaerocephalon,Allium sphaerocephalon,Allium sphaerocephalon,8,8,3,8,3,0,0
+18,Allium flavum,Allium flavum,Allium flavum,8,7,2,7,2,0,0
+19,Allium scorodopasum,Allium scorodoprasum,Allium scorodoprasum,6,6,6,7,7,0,0
+20,Allium senescens subsp. montanum,Allium senescens subsp. montanum,Allium senescens ssp. montanum,8,7,2,6,3,0,0
+21,Allium sp.,Allium sp.,NA,NA,NA,NA,NA,NA,NA,0
+22,Alopecurus pratensis,Alopecurus pratensis,Alopecurus pratensis,7,5,6,6,7,1,0
+23,Alyssum alyssoides,Alyssum alyssoides,Alyssum alyssoides,9,6,3,8,3,0,0
+24,Anacamptis morio,Anacamptis morio,Orchis morio,8,5,4,6,3,0,0
+25,Anemone sylvestris,Anemone sylvestris,Anemone sylvestris,6,7,3,8,3,0,0
+26,Angelica sylvestris,Angelica sylvestris,Angelica sylvestris,6,5,8,6,6,0,0
+27,Anthemis sp.,Anthemis sp.,NA,NA,NA,NA,NA,NA,NA,0
+28,Anthericum ramosum,Anthericum ramosum,Anthericum ramosum,7,6,3,7,3,0,0
+29,Anthoxanthum odoratum,Anthoxanthum odoratum,Anthoxanthum odoratum,7,5,5,4,4,0,0
+30,Anthriscus cerefolium,Anthriscus cerefolium,Anthriscus cerefolium,6,7,5,7,8,0,0
+31,Anthriscus sylvestris,Anthriscus sylvestris,Anthriscus sylvestris,7,5,5,7,8,0,0
+32,Anthyllis vulneraria,Anthyllis vulneraria,Anthyllis vulneraria,8,5,4,7,3,0,0
+33,Arabidopsis thaliana,Arabidopsis thaliana,Arabidopsis thaliana,7,6,4,4,4,0,0
+34,Arabis glabra,Turritis glabra,Turritis glabra,6,6,3,7,5,0,0
+35,Arabis hirsuta,Arabis hirsuta agg.,Arabis hirsuta agg.,7,6,4,7,5,0,0
+36,Arabis hirsuta agg.,Arabis hirsuta agg.,Arabis hirsuta agg.,7,6,4,7,5,0,0
+37,Arenaria serpyllifolia,Arenaria serpyllifolia,Arenaria serpyllifolia,8,5,4,6,4,0,0
+38,Aristolochia clematitis,Aristolochia clematitis,Aristolochia clematitis,6,7,5,7,7,0,0
+39,Armeria elongata,Armeria elongata,Armeria elongata,7,6,3,5,3,0,0
+40,Arrhenatherum elatius,Arrhenatherum elatius,Arrhenatherum elatius,7,5,5,7,7,1,0
+41,Artemisia absinthium,Artemisia absinthium,Artemisia absinthium,8,6,4,7,7,1,0
+42,Artemisia campestris,Artemisia campestris,Artemisia campestris,8,7,2,6,3,0,0
+43,Artemisia vulgaris,Artemisia vulgaris,Artemisia vulgaris,7,6,5,6,8,1,0
+44,Asparagus officinalis,Asparagus officinalis,Asparagus officinalis,7,7,3,7,4,0,0
+45,Asperula cynanchica,Asperula cynanchica,Asperula cynanchica,8,7,3,8,3,0,0
+46,Aster amellus,Aster amellus,Aster amellus,8,6,3,8,3,0,0
+47,Asteraceae,NA,NA,NA,NA,NA,NA,NA,NA,0
+48,Astragalus austriacus,Astragalus austriacus,Astragalus austriacus,8,7,3,9,3,0,0
+49,Astragalus cf. cicer,Astragalus cicer,Astragalus cicer,7,6,4,8,4,0,0
+50,Astragalus cf. onobrychis,Astragalus onobrychis,Astragalus onobrychis,8,7,2,9,3,0,0
+51,Astragalus cicer,Astragalus cicer,Astragalus cicer,7,6,4,8,4,0,0
+52,Astragalus danicus,Astragalus danicus,Astragalus danicus,8,7,4,8,4,0,0
+53,Astragalus exscapus,Astragalus exscapus,Astragalus exscapus,9,7,2,9,3,0,0
+54,Astragalus glycyphyllos,Astragalus glycyphyllos,Astragalus glycyphyllos,6,6,4,7,4,0,0
+55,Astragalus onobrychis,Astragalus onobrychis,Astragalus onobrychis,8,7,2,9,3,0,0
+56,Astragalus sp.,Astragalus sp.,NA,NA,NA,NA,NA,NA,NA,0
+57,Avena fatua,Avena fatua,Avena fatua,8,6,5,7,7,0,0
+58,Avenula pratensis,Helictochloa pratensis,Helictochloa pratensis,8,6,3,6,2,0,0
+59,Avenula pratensis subsp. hirtifolium,Helictochloa pratensis,Helictochloa pratensis,8,6,3,6,2,0,0
+60,Avenula pubescens,Avenula pubescens,Avenula pubescens,7,6,4,6,4,0,0
+61,Ballota nigra,Ballota nigra,Ballota nigra,7,6,5,7,8,1,0
+62,Berberis aquifolium,Berberis aquifolium,Mahonia aquifolium,6,6,4,6,5,0,1
+63,Berteroa incana,Berteroa incana,Berteroa incana,9,6,3,6,4,0,0
+64,Betonica officinalis,Betonica officinalis,Betonica officinalis,6,6,4,7,4,1,0
+65,Bothriochloa ischaemum,Bothriochloa ischaemum,Bothriochloa ischaemum,9,7,3,8,3,0,0
+66,Brachypodium pinnatum,Brachypodium pinnatum,Brachypodium pinnatum,6,6,4,7,4,0,0
+67,Briza media,Briza media,Briza media,8,5,5,5,3,1,0
+68,Bromus erectus,Bromus erectus,Bromus erectus,8,5,3,8,4,1,0
+69,Bromus hordeaceus,Bromus hordeaceus,Bromus hordeaceus,8,6,5,6,5,1,0
+70,Bromus inermis,Bromus inermis,Bromus inermis,8,6,4,8,6,1,0
+71,Bromus japonicus,Bromus japonicus,Bromus japonicus,8,7,4,8,5,0,0
+72,Bromus sterilis,Bromus sterilis,Bromus sterilis,7,6,4,6,7,0,0
+73,Bryonia sp.,Bryonia sp.,NA,NA,NA,NA,NA,NA,NA,0
+74,Buglossoides purpurocaerulea,Buglossoides purpurocaerulea,Buglossoides purpurocaerulea,5,7,4,8,4,0,0
+75,Bupleurum falcatum,Bupleurum falcatum,Bupleurum falcatum,6,6,3,8,3,0,0
+76,Calamagrostis epigejos,Calamagrostis epigejos,Calamagrostis epigejos,7,5,5,6,6,1,0
+77,Calamagrostis sp.,Calamagrostis sp.,NA,NA,NA,NA,NA,NA,NA,0
+78,Campanula cf. bononiensis,Campanula bononiensis,Campanula bononiensis,7,6,3,8,3,0,0
+79,Campanula cf. bononiensis/rapunculoides,Campanula sp.,NA,NA,NA,NA,NA,NA,NA,0
+80,Campanula cf. glomerata,Campanula glomerata,Campanula glomerata,7,6,4,7,4,0,0
+81,Campanula cf. rapunculoides,Campanula rapunculoides,Campanula rapunculoides,6,6,5,7,6,0,0
+82,Campanula glomerata,Campanula glomerata,Campanula glomerata,7,6,4,7,4,0,0
+83,Campanula glomerata subsp. farinosa,Campanula glomerata,Campanula glomerata,7,6,4,7,4,0,0
+84,Campanula glomerata/bononiensis,Campanula sp.,NA,NA,NA,NA,NA,NA,NA,0
+85,Campanula moravica,Campanula moravica,Campanula moravica,7,6,3,6,3,0,0
+86,Campanula persicifolia,Campanula persicifolia,Campanula persicifolia,5,6,4,7,5,0,0
+87,Campanula rapunculoides,Campanula rapunculoides,Campanula rapunculoides,6,6,5,7,6,0,0
+88,Campanula rotundifolia agg.,Campanula rotundifolia agg.,Campanula rotundifolia agg.,7,5,4,5,3,0,0
+89,Campanula sp.,Campanula sp.,NA,NA,NA,NA,NA,NA,NA,0
+90,Cardaria draba,Cardaria draba,Lepidium draba,8,7,4,7,6,0,0
+91,Carduus acanthoides,Carduus acanthoides,Carduus acanthoides,9,6,4,8,7,1,0
+92,Carduus cf. acanthoides,Carduus acanthoides,Carduus acanthoides,9,6,4,8,7,1,0
+93,Carduus nutans,Carduus nutans,Carduus nutans,8,6,4,8,6,0,0
+94,Carex caryophyllea,Carex caryophyllea,Carex caryophyllea,8,6,4,6,3,0,0
+95,Carex cf. caryophyllea,Carex caryophyllea,Carex caryophyllea,8,6,4,6,3,0,0
+96,Carex cf. michelii,Carex michelii,Carex michelii,6,7,3,7,4,0,0
+97,Carex flacca,Carex flacca,Carex flacca,7,5,6,8,3,1,0
+98,Carex humilis,Carex humilis,Carex humilis,7,6,2,8,3,0,0
+99,Carex michelii,Carex michelii,Carex michelii,6,7,3,7,4,0,0
+100,Carex montana,Carex montana,Carex montana,5,5,4,7,4,0,0
+101,Carex praecox,Carex praecox,Carex praecox,8,6,4,6,4,1,0
+102,Carex sp.,Carex sp.,NA,NA,NA,NA,NA,NA,NA,0
+103,Carex supina,Carex supina,Carex supina,9,7,2,7,2,0,0
+104,Carex tomentosa,Carex tomentosa,Carex tomentosa,7,6,6,8,4,1,0
+105,Carlina acaulis,Carlina acaulis,Carlina acaulis,8,5,4,5,3,0,0
+106,Carlina cf. biebersteinii,Carlina biebersteinii,Carlina biebersteinii,8,5,4,7,3,0,0
+107,Carlina cf. vulgaris,Carlina vulgaris,Carlina vulgaris,8,5,4,7,3,0,0
+108,Carlina sp.,Carlina sp.,NA,NA,NA,NA,NA,NA,NA,0
+109,Carlina vulgaris,Carlina vulgaris,Carlina vulgaris,8,5,4,7,3,0,0
+110,Carpinus betulus,Carpinus betulus,Carpinus betulus,4,6,5,6,5,0,1
+111,Centaurea jacea,Centaurea jacea agg.,Centaurea jacea agg.,7,5,5,6,5,1,0
+112,Centaurea jacea agg.,Centaurea jacea agg.,Centaurea jacea agg.,7,5,5,6,5,1,0
+113,Centaurea scabiosa,Centaurea scabiosa,Centaurea scabiosa,7,6,4,8,4,0,0
+114,Centaurea stoebe,Centaurea stoebe,Centaurea stoebe,8,7,2,6,4,0,0
+115,Centaurea triumfetti,Centaurea triumfetti,Centaurea triumfetti,7,7,3,8,3,0,0
+116,Cerastium arvensis,Cerastium arvense,Cerastium arvense,8,6,4,6,4,0,0
+117,Cerastium cf. brachypetalum,Cerastium brachypetalum,Cerastium brachypetalum,9,7,3,7,3,0,0
+118,Cerastium cf. glutinosum,Cerastium pumilum agg.,Cerastium pumilum agg.,9,7,3,7,4,1,0
+119,Cerastium glutinosum,Cerastium pumilum agg.,Cerastium pumilum agg.,9,7,3,7,4,1,0
+120,Cerastium holosteoides,Cerastium holosteoides,Cerastium holosteoides,7,5,5,6,6,1,0
+121,Cerastium pumilum,Cerastium pumilum agg.,Cerastium pumilum agg.,9,7,3,7,4,1,0
+122,Cerastium pumilum agg.,Cerastium pumilum agg.,Cerastium pumilum agg.,9,7,3,7,4,1,0
+123,Cerastium semidecandrum,Cerastium semidecandrum,Cerastium semidecandrum,9,7,3,6,3,0,0
+124,Cerastium tenoreanum,Cerastium tenoreanum,Cerastium tenoreanum,9,7,3,7,3,0,0
+125,Cerinthe minor,Cerinthe minor,Cerinthe minor,7,6,4,8,4,0,0
+126,Chaerophyllum aromaticum,Chaerophyllum aromaticum,Chaerophyllum aromaticum,7,5,7,6,8,0,0
+127,Chamaecytisus austriacus,Chamaecytisus austriacus,Chamaecytisus austriacus,7,8,3,9,3,0,0
+128,Chamaecytisus cf. albus,Chamaecytisus albus,Chamaecytisus albus,8,8,3,9,3,0,0
+129,Chamaecytisus ratisbonensis,Chamaecytisus ratisbonensis,Chamaecytisus ratisbonensis,7,7,3,7,3,0,0
+130,Chamaecytisus sp.,Chamaecytisus sp.,NA,NA,NA,NA,NA,NA,NA,0
+131,Chamaecytisus supinus,Chamaecytisus supinus,Chamaecytisus supinus,7,6,4,6,3,0,0
+132,Chondrilla juncea,Chondrilla juncea,Chondrilla juncea,8,7,2,6,3,0,0
+133,Cirsium arvense,Cirsium arvense,Cirsium arvense,8,5,5,6,7,1,0
+134,Cirsium cf. pannonicum,Cirsium pannonicum,Cirsium pannonicum,7,7,4,8,4,0,0
+135,Cirsium pannonicum,Cirsium pannonicum,Cirsium pannonicum,7,7,4,8,4,0,0
+136,Cirsium sp.,Cirsium sp.,NA,NA,NA,NA,NA,NA,NA,0
+137,Cirsium vulgare,Cirsium vulgare,Cirsium vulgare,8,5,5,7,8,1,0
+138,Clematis vitalba,Clematis vitalba,Clematis vitalba,7,7,5,7,7,0,0
+139,Clinopodium vulgare,Clinopodium vulgare,Clinopodium vulgare,6,6,4,7,4,0,0
+140,Colchicum autumnale,Colchicum autumnale,Colchicum autumnale,6,5,6,6,5,1,0
+141,Convallaria majalis,Convallaria majalis,Convallaria majalis,4,5,5,5,4,0,0
+142,Convolvulus arvensis,Convolvulus arvensis,Convolvulus arvensis,7,6,4,7,6,1,0
+143,Cornus sanguinea,Cornus sanguinea,Cornus sanguinea,6,6,5,7,5,0,1
+144,Crambe tataria,Crambe tataria,Crambe tataria,9,8,3,8,3,0,0
+145,Crataegus cf. fallacina,Crataegus fallacina,Crataegus monogyna,6,6,4,7,5,0,1
+146,Crataegus fallacina,Crataegus fallacina,Crataegus monogyna,6,6,4,7,5,0,1
+147,Crataegus laevigata,Crataegus laevigata,Crataegus levigata,5,6,5,7,5,0,1
+148,Crataegus monogina agg.,Crataegus monogyna agg.,Crataegus monogyna,6,6,4,7,5,0,1
+149,Crataegus sp.,Crataegus monogyna agg.,Crataegus monogyna,6,6,4,7,5,0,1
+150,Crepis pannonica,Crepis pannonica,Crepis pannonica,8,7,3,8,4,0,0
+151,Crepis praemorsa,Crepis praemorsa,Crepis praemorsa,6,7,4,8,3,0,0
+152,Crepis sp.,Crepis sp.,NA,NA,NA,NA,NA,NA,NA,0
+153,Cuscuta sp.,Cuscuta sp.,NA,NA,NA,NA,NA,NA,NA,0
+154,Cynoglossum officinale,Cynoglossum officinale,Cynoglossum officinale,8,6,4,7,6,0,0
+155,Cytisus procumbens,Cytisus procumbens,Cytisus procumbens,8,8,3,8,3,0,0
+156,Dactylis glomerata,Dactylis glomerata,Dactylis glomerata,7,5,5,6,6,1,0
+157,Danthonia decumbens,Danthonia decumbens,Danthonia decumbens,8,5,5,3,2,0,0
+158,Daucus carota,Daucus carota,Daucus carota,8,5,4,6,5,1,0
+159,Dianthus carthusianorum agg.,Dianthus carthusianorum agg.,Dianthus carthusianorum agg.,8,6,3,7,3,0,0
+160,Dianthus carthusianorum/pontederae,Dianthus carthusianorum agg.,Dianthus carthusianorum agg.,8,6,3,7,3,0,0
+161,Dianthus pontederae,Dianthus carthusianorum agg.,Dianthus carthusianorum agg.,8,6,3,7,3,0,0
+162,Dictamnus albus,Dictamnus albus,Dictamnus albus,7,8,3,8,3,0,0
+163,Dorycnium germanicum,Dorycnium germanicum,Dorycnium germanicum,7,7,2,8,3,0,0
+164,Dorycnium pentaphyllum agg.,Dorycnium pentaphyllum agg.,Dorycnium pentaphyllum agg.,7,6,3,8,3,0,0
+165,Echinops sphaerocephalus,Echinops sphaerocephalus,Echinops sphaerocephalus,8,7,4,7,7,1,0
+166,Echium maculatum,Echium maculatum,Echium maculatum,8,8,3,8,3,0,0
+167,Echium vulgare,Echium vulgare,Echium vulgare,9,5,4,6,4,0,0
+168,Elymus hispidus,Elymus hispidus,Elymus hispidus,7,7,3,7,4,0,0
+169,Elymus repens,Elymus repens,Elymus repens,7,5,5,6,7,1,0
+170,Equisetum arvense,Equisetum arvense,Equisetum arvense,6,5,6,5,5,1,0
+171,Erigeron annuus,Erigeron annuus,Erigeron annuus,8,5,5,6,6,0,0
+172,Erodium cicutarium,Erodium cicutarium,Erodium cicutarium,8,6,4,6,6,0,0
+173,Eryngium campestre,Eryngium campestre,Eryngium campestre,9,7,3,7,3,0,0
+174,Erysimum diffusum,Erysimum diffusum,Erysimum diffusum,9,7,2,6,3,0,0
+175,Erysimum odoratum,Erysimum odoratum,Erysimum odoratum,7,7,3,8,3,0,0
+176,Euonymus europaeus,Euonymus europaeus,Euonymus europaeus,5,5,5,7,6,0,0
+177,Euphorbia cf. virgata,Euphorbia virgata,Euphorbia virgata,8,7,4,8,3,1,0
+178,Euphorbia cyparissias,Euphorbia cyparissias,Euphorbia cyparissias,8,6,3,6,3,1,0
+179,Euphorbia esula,Euphorbia esula,Euphorbia esula,8,6,4,7,4,1,0
+180,Euphorbia virgata,Euphorbia virgata,Euphorbia virgata,8,7,4,8,3,1,0
+181,Euphrasia sp.,Euphrasia sp.,NA,NA,NA,NA,NA,NA,NA,0
+182,Falcaria vulgaris,Falcaria vulgaris,Falcaria vulgaris,7,7,3,8,5,0,0
+183,Festuca cf. ovina,Festuca ovina agg.,Festuca ovina agg.,8,5,3,5,2,0,0
+184,Festuca cf. rubra,Festuca rubra,Festuca rubra,7,5,5,5,5,1,0
+185,Festuca cf. valesiaca,Festuca valesiaca,Festuca valesiaca,8,7,2,7,2,0,0
+186,Festuca ovina,Festuca ovina,Festuca ovina,7,5,4,3,2,0,0
+187,Festuca ovina agg.,Festuca ovina agg.,Festuca ovina agg.,8,5,3,5,2,0,0
+188,Festuca pallens s. l.,Festuca pallens s. l.,Festuca pallens s. lat.,8,7,2,6,1,0,0
+189,Festuca rubra,Festuca rubra,Festuca rubra,7,5,5,5,5,1,0
+190,Festuca rupicola,Festuca rupicola,Festuca rupicola,8,6,3,8,3,0,0
+191,Festuca sp.,Festuca sp.,NA,NA,NA,NA,NA,NA,NA,0
+192,Festuca valesiaca,Festuca valesiaca,Festuca valesiaca,8,7,2,7,2,0,0
+193,Fillipendula vulgaris,Filipendula vulgaris,Filipendula vulgaris,7,6,4,8,3,0,0
+194,Fragaria cf. vesca/moschata,Fragaria vesca,Fragaria vesca,6,5,5,6,5,0,0
+195,Fragaria vesca,Fragaria vesca,Fragaria vesca,6,5,5,6,5,0,0
+196,Fragaria viridis,Fragaria viridis,Fragaria viridis,7,5,3,7,4,1,0
+197,Frangula alnus,Frangula alnus,Frangula alnus,6,6,7,4,4,0,1
+198,Fraxinus excelsior,Fraxinus excelsior,Fraxinus excelsior,4,5,6,7,7,0,1
+199,Fraxinus sp.,Fraxinus sp.,NA,NA,NA,NA,NA,NA,NA,1
+200,Gagea sp.,Gagea sp.,NA,NA,NA,NA,NA,NA,NA,0
+201,Galatella linosyris,Galatella linosyris,Galatella linosyris,8,7,2,8,3,0,0
+202,Galim verum,Galium verum,Galium verum,7,6,4,5,3,1,0
+203,Galium album,Galium album,Galium album,7,6,4,6,6,1,0
+204,Galium aparine,Galium aparine,Galium aparine,6,6,5,6,8,1,0
+205,Galium boreale,Galium boreale,Galium boreale,6,6,6,7,4,0,0
+206,Galium cf. glaucum/verum,Galium verum,Galium verum,7,6,4,5,3,1,0
+207,Galium cf. pumilum,Galium pumilum,Galium pumilum,7,5,4,4,3,0,0
+208,Galium glaucum,Galium glaucum,Galium glaucum,8,7,2,8,3,0,0
+209,Galium pumilum,Galium pumilum,Galium pumilum,7,5,4,4,3,0,0
+210,Galium verum,Galium verum,Galium verum,7,6,4,5,3,1,0
+211,Genista tinctoria,Genista tinctoria,Genista tinctoria,7,6,4,6,3,0,0
+212,Gentiana cruciata,Gentiana cruciata,Gentiana cruciata,7,6,3,8,3,0,0
+213,Geranium pratense,Geranium pratense,Geranium pratense,7,6,5,7,7,1,0
+214,Geranium pusillum,Geranium pusillum,Geranium pusillum,7,6,4,6,7,0,0
+215,Geranium sanguineum,Geranium sanguineum,Geranium sanguineum,7,6,3,8,3,0,0
+216,Geum urbanum,Geum urbanum,Geum urbanum,5,5,5,6,7,0,0
+217,Glechoma hederacea,Glechoma hederacea,Glechoma hederacea,5,6,6,6,7,1,0
+218,Globularia bisnagarica,Globularia bisnagarica,Globularia bisnagarica,9,6,2,9,2,0,0
+219,Gypsophila paniculata,Gypsophila paniculata,Gypsophila paniculata,9,7,3,6,4,0,0
+220,Helianthemum nummularium,Helianthemum nummularium,Helianthemum grandiflorum,8,5,3,7,3,0,0
+221,Helianthemum sp.,Helianthemum sp.,NA,NA,NA,NA,NA,NA,NA,0
+222,Helictotrichon pratense,Helictochloa pratensis,Helictochloa pratensis,8,6,3,6,2,0,0
+223,Helictotrichon pubescens,Avenula pubescens,Avenula pubescens,7,6,4,6,4,0,0
+224,Heracleum sphondylium,Heracleum sphondylium,Heracleum sphondylium,7,5,5,6,8,1,0
+225,Hesperis tristis,Hesperis tristis,Hesperis tristis,8,8,3,8,3,0,0
+226,Hieracium,Hieracium sp.,NA,NA,NA,NA,NA,NA,NA,0
+227,Hieracium cf. sabaudum,Hieracium sabaudum,Hieracium sabaudum,5,6,5,4,4,0,0
+228,Hieracium echioides,Hieracium echioides,Pilosella echioides,8,7,2,6,1,0,0
+229,Hieracium maculatum,Hieracium maculatum,Hieracium maculatum,5,7,4,5,4,0,0
+230,Hieracium sp.,Hieracium sp.,NA,NA,NA,NA,NA,NA,NA,0
+231,Hieracium umbellatum,Hieracium umbellatum,Hieracium umbellatum,7,6,4,6,3,0,0
+232,Holcus lanatus,Holcus lanatus,Holcus lanatus,7,5,6,6,5,1,0
+233,Holosteum umbellatum,Holosteum umbellatum,Holosteum umbellatum,9,6,3,7,3,0,0
+234,Humulus lupulus,Humulus lupulus,Humulus lupulus,6,6,7,6,8,0,0
+235,Hylotelephium maximum,Hylotelephium maximum,Hylotelephium maximum,7,6,4,5,3,0,0
+236,Hypericum elegans,Hypericum elegans,Hypericum elegans,8,7,3,8,3,0,0
+237,Hypericum perforatum,Hypericum perforatum,Hypericum perforatum,7,5,4,6,4,1,0
+238,Hypericum perforatum/elegans,Hypericum perforatum,Hypericum perforatum,7,5,4,6,4,1,0
+239,Hypericum sp.,Hypericum sp.,NA,NA,NA,NA,NA,NA,NA,0
+240,Hypochaeris maculata,Hypochaeris maculata,Hypochaeris maculata,8,6,4,7,3,0,0
+241,Hypochaeris radicata,Hypochaeris radicata,Hypochaeris radicata,8,5,5,4,3,1,0
+242,Inula conyzae,Inula conyzae,Inula conyzae,6,6,4,7,3,0,0
+243,Inula ensifolia,Inula ensifolia,Inula ensifolia,8,7,3,8,3,0,0
+244,Inula hirta,Inula hirta,Inula hirta,7,6,3,8,3,0,0
+245,Inula oculus-christi,Inula oculus-christi,Inula oculus-christi,9,8,2,8,3,0,0
+246,Inula salicina,Inula salicina,Inula salicina,7,6,5,8,4,2,0
+247,Iris pumila,Iris pumila,Iris pumila,9,8,2,9,2,0,0
+248,Iris variegata,Iris variegata,Iris variegata,6,7,3,8,4,0,0
+249,Juglans regia,Juglans regia,Juglans regia,6,7,5,7,7,0,1
+250,Jurinea mollis,Jurinea mollis,Jurinea mollis,8,7,2,9,3,0,0
+251,Knautia arvensis,Knautia arvensis,Knautia arvensis,7,6,4,6,4,0,0
+252,Knautia arvensis agg.,Knautia arvensis agg.,Knautia arvensis agg.,7,6,4,6,4,0,0
+253,Koeleria cf. pyramidata,Koeleria pyramidata,Koeleria pyramidata,7,6,4,7,3,0,0
+254,Koeleria macrantha,Koeleria macrantha,Koeleria macrantha,8,6,3,8,2,0,0
+255,Koeleria pyramidata,Koeleria pyramidata,Koeleria pyramidata,7,6,4,7,3,0,0
+256,Kohlrausia prolifera,Petrorhagia prolifera,Petrorhagia prolifera,8,7,3,5,3,0,0
+257,Lactuca serriola,Lactuca serriola,Lactuca serriola,8,7,4,6,6,1,0
+258,Lamium album,Lamium album,Lamium album,6,5,5,6,8,0,0
+259,Lappula squarrosa,Lappula squarrosa,Lappula squarrosa,8,6,3,7,6,0,0
+260,Lathyrus latifolius,Lathyrus latifolius,Lathyrus latifolius,7,7,4,8,5,0,0
+261,Lathyrus pannonicus,Lathyrus pannonicus,Lathyrus pannonicus,6,7,4,8,3,0,0
+262,Lathyrus pannonicus subsp. collinus,Lathyrus pannonicus,Lathyrus pannonicus,6,7,4,8,3,0,0
+263,Lathyrus pratensis,Lathyrus pratensis,Lathyrus pratensis,7,5,6,6,6,1,0
+264,Lathyrus sp.,Lathyrus sp.,NA,NA,NA,NA,NA,NA,NA,0
+265,Lathyrus tuberosus,Lathyrus tuberosus,Lathyrus tuberosus,7,6,4,8,5,1,0
+266,Leontodon hispidus,Leontodon hispidus,Leontodon hispidus,7,5,5,6,6,0,0
+267,Lepidium campestre,Lepidium campestre,Lepidium campestre,7,6,4,8,5,0,0
+268,Lepidium campestris,Lepidium campestre,Lepidium campestre,7,6,4,8,5,0,0
+269,Leucanthemum vulgare,Leucanthemum vulgare agg.,Leucanthemum vulgare agg.,7,5,5,6,5,0,0
+270,Leucanthemum vulgare agg.,Leucanthemum vulgare agg.,Leucanthemum vulgare agg.,7,5,5,6,5,0,0
+271,Libanotis pyrenaica,Libanotis pyrenaica,Libanotis pyrenaica,7,6,3,8,3,0,0
+272,Ligustrum vulgare,Ligustrum vulgare,Ligustrum vulgare,6,6,4,7,5,0,1
+273,Linaria genistifolia,Linaria genistifolia,Linaria genistifolia,8,7,2,5,2,0,0
+274,Linaria vulgaris,Linaria vulgaris,Linaria vulgaris,8,6,4,7,5,1,0
+275,Linum catharticum,Linum catharticum,Linum catharticum,7,5,5,7,3,1,0
+276,Linum flavum,Linum flavum,Linum flavum,8,7,3,8,3,0,0
+277,Linum hirsutum,Linum hirsutum,Linum hirsutum,9,8,3,8,3,0,0
+278,Linum sp.,Linum sp.,NA,NA,NA,NA,NA,NA,NA,0
+279,Linum tenuifolium,Linum tenuifolium,Linum tenuifolium,9,8,2,8,2,0,0
+280,Lithospermum officinale,Lithospermum officinale,Lithospermum officinale,6,6,4,8,5,0,0
+281,Lotus borbasii,Lotus borbasii,Lotus borbasii,8,7,3,8,3,0,0
+282,Lotus cf. borbasii,Lotus borbasii,Lotus borbasii,8,7,3,8,3,0,0
+283,Lotus corniculatus,Lotus corniculatus,Lotus corniculatus,7,5,4,7,4,1,0
+284,Lotus corniculatus var. hirsutus,Lotus corniculatus,Lotus corniculatus,7,5,4,7,4,1,0
+285,Lotus maritimus,Lotus maritimus,Lotus maritimus,8,7,6,8,4,3,0
+286,Luzula campestris,Luzula campestris,Luzula campestris,7,5,4,3,3,0,0
+287,Medicago falcata,Medicago falcata,Medicago falcata,8,6,3,8,3,1,0
+288,Medicago lupulina,Medicago lupulina,Medicago lupulina,7,5,4,7,4,1,0
+289,Medicago minima,Medicago minima,Medicago minima,9,7,3,7,3,0,0
+290,Melampyrum arvense,Melampyrum arvense,Melampyrum arvense,7,7,3,8,4,0,0
+291,Melampyrum cristatum,Melampyrum cristatum,Melampyrum cristatum,6,7,3,7,3,0,0
+292,Melampyrum pratense,Melampyrum pratense,Melampyrum pratense,5,5,5,3,2,0,0
+293,Melica transsilvanica,Melica transsilvanica,Melica transsilvanica,7,7,3,7,4,0,0
+294,Melilotus officinalis,Melilotus officinalis,Melilotus officinalis,8,6,4,7,5,1,0
+295,Melilotus sp.,Melilotus sp.,NA,NA,NA,NA,NA,NA,NA,0
+296,Microthlaspi perfoliatum,Microthlaspi perfoliatum,Microthlaspi perfoliatum,8,6,4,8,4,0,0
+297,Muscari comosum,Muscari comosum,Muscari comosum,7,7,3,7,4,0,0
+298,Muscari sp.,Muscari sp.,NA,NA,NA,NA,NA,NA,NA,0
+299,Myosotis arvensis,Myosotis arvensis,Myosotis arvensis,7,6,5,5,6,0,0
+300,Myosotis sp.,Myosotis sp.,NA,NA,NA,NA,NA,NA,NA,0
+301,Myosotis sparsiflora,Myosotis sparsiflora,Myosotis sparsiflora,5,6,6,7,7,0,0
+302,Neotinea tridentata,Neotinea tridentata,Orchis tridentata,8,7,3,8,3,0,0
+303,Nonea pulla,Nonea pulla,Nonea pulla,8,6,3,8,4,0,0
+304,Odontites luteus,Odontites luteus,Odontites luteus,8,7,3,8,2,0,0
+305,Odontites sp.,Odontites sp.,NA,NA,NA,NA,NA,NA,NA,0
+306,Odontites vernus,Odontites vernus,Odontites vernus,6,6,6,6,5,1,0
+307,Onobrychis arenaria,Onobrychis arenaria,Onobrychis arenaria,8,7,3,8,3,0,0
+308,Onobrychis cf. arenaria/viciifolia,Onobrychis viciifolia agg.,Onobrychis viciifolia agg.,8,6,4,8,4,0,0
+309,Onobrychis viciifolia,Onobrychis viciifolia,Onobrychis viciifolia,8,6,4,8,4,0,0
+310,Onobrychis viciifolia agg.,Onobrychis viciifolia agg.,Onobrychis viciifolia agg.,8,6,4,8,4,0,0
+311,Ononis spinosa,Ononis spinosa,Ononis spinosa,8,6,4,7,3,1,0
+312,Ophrys apifera,Ophrys apifera,Ophrys apifera,7,6,4,8,3,0,0
+313,Orchis hybrida,Orchis hybrida,NA,NA,NA,NA,NA,NA,NA,0
+314,Orchis militaris,Orchis militaris,Orchis militaris,7,7,4,8,2,0,0
+315,Orchis purpurea,Orchis purpurea,Orchis purpurea,6,7,4,8,3,0,0
+316,Origanum vulgare,Origanum vulgare,Origanum vulgare,7,6,3,7,3,0,0
+317,Ornithogalum kochii,Ornithogalum kochii,Ornithogalum kochii,7,7,3,7,4,0,0
+318,Orobanche alba,Orobanche alba,Orobanche alba,8,7,3,8,3,0,0
+319,Orobanche alsatica,Orobanche alsatica,Orobanche alsatica,7,7,3,8,3,0,0
+320,Orobanche cf. caryophyllacea,Orobanche caryophyllacea,Orobanche caryophyllacea,8,6,3,8,3,0,0
+321,Orobanche sp.,Orobanche sp.,NA,NA,NA,NA,NA,NA,NA,0
+322,Oxytropis pilosa,Oxytropis pilosa,Oxytropis pilosa,9,7,2,8,2,0,0
+323,Peucedanum alsaticum,Peucedanum alsaticum,Peucedanum alsaticum,7,7,4,8,3,0,0
+324,Peucedanum cervaria,Peucedanum cervaria,Peucedanum cervaria,7,6,3,7,3,0,0
+325,Phelipanche arenaria,Phelipanche arenaria,Phelipanche arenaria,8,8,2,8,2,0,0
+326,Phleum phleoides,Phleum phleoides,Phleum phleoides,8,6,3,7,3,0,0
+327,Phlomis tuberosa,Phlomis tuberosa,Phlomis tuberosa,7,7,4,8,4,0,0
+328,Picris hieracioides,Picris hieracioides,Picris hieracioides,8,6,4,7,5,0,0
+329,Pilosella bauhinii,Pilosella bauhini,Pilosella bauhini,8,7,3,7,3,0,0
+330,Pilosella cf. cymosa,Pilosella cymosa,Pilosella cymosa,8,6,3,7,3,0,0
+331,Pilosella officinarum,Pilosella officinarum,Pilosella officinarum,7,5,4,5,2,0,0
+332,Pilosella sp.,Pilosella sp.,NA,NA,NA,NA,NA,NA,NA,0
+333,Pimpinella saxifraga,Pimpinella saxifraga,Pimpinella saxifraga,7,5,3,6,3,1,0
+334,Pinus sylvestris,Pinus sylvestris,Pinus sylvestris,6,5,5,5,2,0,1
+335,Plantago lanceolata,Plantago lanceolata,Plantago lanceolata,7,5,5,6,5,1,0
+336,Plantago major,Plantago major,Plantago major,7,5,5,6,6,1,0
+337,Plantago media,Plantago media,Plantago media,7,6,4,7,4,0,0
+338,Poa angustifolia,Poa angustifolia,Poa angustifolia,7,6,4,6,4,1,0
+339,Poa bulbosa,Poa bulbosa,Poa bulbosa,8,7,3,6,3,1,0
+340,Poa compressa,Poa compressa,Poa compressa,9,6,3,7,3,1,0
+341,Poa pratensis agg.,Poa pratensis agg.,Poa pratensis agg.,6,5,5,6,5,1,0
+342,Poa sp.,Poa sp.,NA,NA,NA,NA,NA,NA,NA,0
+343,Poa trivialis,Poa trivialis,Poa trivialis,6,5,7,6,7,0,0
+344,Poaceae sp.,Poaceae sp.,NA,NA,NA,NA,NA,NA,NA,0
+345,Polygala comosa,Polygala comosa,Polygala comosa,8,6,3,8,3,0,0
+346,Polygala comosa/vulgaris,Polygala comosa,Polygala comosa,8,6,3,8,3,0,0
+347,Polygala major,Polygala major,Polygala major,8,7,3,8,3,0,0
+348,Polygala vulgaris,Polygala vulgaris,Polygala vulgaris,7,5,5,4,3,0,0
+349,Polygonatum odoratum,Polygonatum odoratum,Polygonatum odoratum,6,6,3,7,3,0,0
+350,Populus tremula,Populus tremula,Populus tremula,6,5,5,5,5,0,1
+351,Potentilla alba,Potentilla alba,Potentilla alba,6,6,4,7,4,0,0
+352,Potentilla argentea,Potentilla argentea,Potentilla argentea,9,6,2,5,3,0,0
+353,Potentilla heptaphylla,Potentilla heptaphylla,Potentilla heptaphylla,7,6,3,8,4,0,0
+354,Potentilla incana,Potentilla incana,Potentilla incana,9,7,2,8,2,0,0
+355,Potentilla recta,Potentilla recta,Potentilla recta,8,7,3,7,3,0,0
+356,Potentilla reptans,Potentilla reptans,Potentilla reptans,6,6,6,7,6,1,0
+357,Potentilla verna,Potentilla verna,Potentilla verna,8,6,3,6,2,0,0
+358,Primula veris,Primula veris,Primula veris,7,6,4,7,4,0,0
+359,Prunella cf. grandiflora/vulgaris,Prunella grandiflora,Prunella grandiflora,7,6,3,8,3,0,0
+360,Prunella grandiflora,Prunella grandiflora,Prunella grandiflora,7,6,3,8,3,0,0
+361,Prunella laciniata,Prunella laciniata,Prunella laciniata,7,6,3,8,3,0,0
+362,Prunella vulgaris,Prunella vulgaris,Prunella vulgaris,7,5,5,6,5,1,0
+363,Prunus avium,Prunus avium,Prunus avium,6,5,5,7,5,0,1
+364,Prunus cerasifera,Prunus cerasifera,Prunus cerasifera,6,6,5,7,6,0,1
+365,Prunus fruticosa,Prunus fruticosa,Prunus fruticosa,8,7,3,8,3,0,1
+366,Prunus mahaleb,Prunus mahaleb,Prunus mahaleb,7,7,3,8,4,0,1
+367,Prunus sp.,Prunus sp.,NA,NA,NA,NA,NA,NA,NA,1
+368,Prunus spinosa,Prunus spinosa,Prunus spinosa,7,6,4,7,5,0,1
+369,Pulsatilla grandis,Pulsatilla grandis,Pulsatilla grandis,8,7,3,7,2,0,0
+370,Pyrus communis agg.,Pyrus communis agg.,Pyrus communis agg.,6,6,5,7,5,0,1
+371,Quercus sp.,Quercus sp.,NA,NA,NA,NA,NA,NA,NA,1
+372,Ranunculus bulbosus,Ranunculus bulbosus,Ranunculus bulbosus,8,6,4,7,3,0,0
+373,Ranunculus illyricus,Ranunculus illyricus,Ranunculus illyricus,8,7,3,7,3,0,0
+374,Ranunculus polyanthemos,Ranunculus polyanthemos,Ranunculus polyanthemos,6,6,4,7,3,0,0
+375,Rapistrum perenne,Rapistrum perenne,Rapistrum perenne,8,7,3,8,5,0,0
+376,Reseda lutea,Reseda lutea,Reseda lutea,8,6,3,8,5,0,0
+377,Rhamnus cathartica,Rhamnus cathartica,Rhamnus cathartica,7,5,4,8,5,0,1
+378,Rhinanthus major,Rhinanthus major,Rhinanthus major,7,5,5,7,3,0,0
+379,Rhinanthus sp.,Rhinanthus sp.,NA,NA,NA,NA,NA,NA,NA,0
+380,Robinia pseudoacacia,Robinia pseudoacacia,Robinia pseudoacacia,6,6,4,6,7,1,1
+381,Rosa canina agg.,Rosa canina agg.,Rosa canina agg.,7,5,4,7,4,0,1
+382,Rosa rubiginosa,Rosa rubiginosa,Rosa rubiginosa,7,6,4,8,4,0,1
+383,Rosa sp.,Rosa canina agg.,Rosa canina agg.,7,5,4,7,4,0,1
+384,Rosa sp. (hairy),Rosa canina agg.,Rosa canina agg.,7,5,4,7,4,0,1
+385,Rosa spinosissima,Rosa spinosissima,Rosa spinosissima,8,6,4,8,3,0,1
+386,Rubus caesius agg.,Rubus caesius agg.,Rubus caesius,6,5,6,7,7,1,1
+387,Rumex acetosa,Rumex acetosa,Rumex acetosa,7,5,5,5,6,1,0
+388,Rumex acetosella,Rumex acetosella,Rumex acetosella,8,5,3,4,2,0,0
+389,Rumex crispus,Rumex crispus,Rumex crispus,7,5,6,6,7,1,0
+390,Salvia nemorosa,Salvia nemorosa,Salvia nemorosa,8,7,3,8,4,0,0
+391,Salvia pratensis,Salvia pratensis,Salvia pratensis,7,6,3,8,4,0,0
+392,Salvia verticillata,Salvia verticillata,Salvia verticillata,7,6,4,7,5,0,0
+393,Sanguisorba minor,Sanguisorba minor,Sanguisorba minor,7,6,3,7,3,0,0
+394,Saxifraga bulbifera,Saxifraga bulbifera,Saxifraga bulbifera,8,7,3,6,3,0,0
+395,Scabiosa canescens,Scabiosa canescens,Scabiosa canescens,7,7,3,8,3,0,0
+396,Scabiosa ochroleuca,Scabiosa ochroleuca,Scabiosa ochroleuca,8,6,3,8,3,0,0
+397,Scabiosa sp.,Scabiosa sp.,NA,NA,NA,NA,NA,NA,NA,0
+398,Scorzonera austriaca,Scorzonera austriaca,Scorzonera austriaca,8,7,3,8,2,0,0
+399,Scorzonera hispanica,Scorzonera hispanica,Scorzonera hispanica,7,7,4,8,3,0,0
+400,Securigera varia,Securigera varia,Securigera varia,7,5,4,7,4,0,0
+401,Sedum acre,Sedum acre,Sedum acre,8,6,2,6,2,0,0
+402,Sedum sexangulare,Sedum sexangulare,Sedum sexangulare,8,6,2,6,3,0,0
+403,Senecio jacobaea,Senecio jacobaea,Senecio jacobaea,8,6,4,7,4,1,0
+404,Serratula lycopifolia,Serratula lycopifolia,Klasea lycopifolia,7,7,3,8,4,0,0
+405,Serratula tinctoria,Serratula tinctoria,Serratula tinctoria,6,6,6,7,3,1,0
+406,Seseli annuum,Seseli annuum,Seseli annuum,8,6,3,8,2,0,0
+407,Seseli hippomarathrum,Seseli hippomarathrum,Seseli hippomarathrum,9,7,2,9,1,0,0
+408,Seseli osseum,Seseli osseum,Seseli osseum,9,7,2,7,2,0,0
+409,Seseli pallasii,Seseli pallasii,Seseli pallasii,8,8,3,8,3,0,0
+410,Silene latifolia,Silene latifolia,Silene latifolia,7,6,4,7,7,0,0
+411,Silene latifolia subsp. alba,Silene latifolia subsp. alba,Silene latifolia ssp. alba,7,6,4,7,7,0,0
+412,Silene nutans,Silene nutans,Silene nutans,6,6,3,6,3,0,0
+413,Silene otites,Silene otites,Silene otites,9,7,2,7,2,0,0
+414,Silene vulgaris,Silene vulgaris,Silene vulgaris,6,6,4,6,4,0,0
+415,Solidago sp.,Solidago sp.,NA,NA,NA,NA,NA,NA,NA,0
+416,Solidago virgaurea,Solidago virgaurea,Solidago virgaurea,6,5,5,5,4,0,0
+417,Sp. sp.,Sp. sp.,NA,NA,NA,NA,NA,NA,NA,0
+418,Sp. sp. (teeth leaves),Sp. sp. (teeth leaves),NA,NA,NA,NA,NA,NA,NA,0
+419,Stachys recta,Stachys recta,Stachys recta,7,6,3,8,3,0,0
+420,Stellaria media agg.,Stellaria media agg.,Stellaria media agg.,6,5,5,6,8,1,0
+421,Stipa capillata,Stipa capillata,Stipa capillata,9,7,2,8,2,0,0
+422,Stipa cf. pulcherrima,Stipa pulcherrima,Stipa pulcherrima,9,7,2,8,2,0,0
+423,Stipa cf. pulcherrima/pennata,Stipa pennata agg.,Stipa pennata agg.,9,7,2,7,2,0,0
+424,Stipa dasyphylla,Stipa dasyphylla,Stipa dasyphylla,9,7,2,7,2,0,0
+425,Stipa pennata,Stipa pennata,Stipa pennata,8,7,2,7,2,0,0
+426,Stipa pennata agg.,Stipa pennata agg.,Stipa pennata agg.,9,7,2,7,2,0,0
+427,Stipa pulcherrima,Stipa pulcherrima,Stipa pulcherrima,9,7,2,8,2,0,0
+428,Stipa tirsa,Stipa tirsa,Stipa tirsa,8,7,3,7,3,0,0
+429,Tanacetum corymbosum,Tanacetum corymbosum,Tanacetum corymbosum,6,7,4,7,4,0,0
+430,Tanacetum vulgare,Tanacetum vulgare,Tanacetum vulgare,7,6,5,7,6,1,0
+431,Taraxacum sect. Taraxacum,Taraxacum sect. Taraxacum,Taraxacum sect. Taraxacum,7,5,5,7,7,1,0
+432,Taraxacum sp.,Taraxacum sp.,NA,NA,NA,NA,NA,NA,NA,0
+433,Tephroseris integrifolia,Tephroseris integrifolia,Tephroseris integrifolia,7,6,4,8,3,0,0
+434,Teucrium chamaedrys,Teucrium chamaedrys,Teucrium chamaedrys,7,7,3,8,3,0,0
+435,Thalictrum minus,Thalictrum minus,Thalictrum minus,6,7,3,8,3,0,0
+436,Thesium dollineri,Thesium dollineri,Thesium dollineri,7,7,3,8,3,0,0
+437,Thesium linophyllon,Thesium linophyllon,Thesium linophyllon,7,7,3,8,3,0,0
+438,Thesium ramosum,Thesium ramosum,Thesium ramosum,7,7,3,8,3,0,0
+439,Thesium sp.,Thesium sp.,NA,NA,NA,NA,NA,NA,NA,0
+440,Thlaspi perfoliatum,Thlaspi perfoliatum,Microthlaspi perfoliatum,8,6,4,8,4,0,0
+441,Thymus cf. pannonicus,Thymus pannonicus agg.,Thymus pannonicus agg.,8,7,3,7,3,0,0
+442,Thymus cf. praecox,Thymus praecox,Thymus praecox,8,6,2,7,2,0,0
+443,Thymus glabrescens,Thymus glabrescens,Thymus glabrescens,8,7,2,8,3,0,0
+444,Thymus pannonicus,Thymus pannonicus agg.,Thymus pannonicus agg.,8,7,3,7,3,0,0
+445,Thymus pannonicus agg.,Thymus pannonicus agg.,Thymus pannonicus agg.,8,7,3,7,3,0,0
+446,Thymus praecox,Thymus praecox,Thymus praecox,8,6,2,7,2,0,0
+447,Thymus pulegioides,Thymus pulegioides,Thymus pulegioides,7,6,4,6,3,0,0
+448,Tragopogon cf. dubius,Tragopogon dubius,Tragopogon dubius,8,7,4,7,5,0,0
+449,Tragopogon dubius,Tragopogon dubius,Tragopogon dubius,8,7,4,7,5,0,0
+450,Tragopogon orientalis,Tragopogon pratensis agg.,Tragopogon pratensis agg.,7,5,5,7,6,0,0
+451,Tragopogon pratensis agg.,Tragopogon pratensis agg.,Tragopogon pratensis agg.,7,5,5,7,6,0,0
+452,Trifolium alpestre,Trifolium alpestre,Trifolium alpestre,7,6,3,7,3,0,0
+453,Trifolium arvense,Trifolium arvense,Trifolium arvense,8,5,3,4,2,0,0
+454,Trifolium campestre,Trifolium campestre,Trifolium campestre,8,6,4,6,4,1,0
+455,Trifolium dubium,Trifolium dubium,Trifolium dubium,6,6,5,6,5,1,0
+456,Trifolium medium/pratense,Trifolium pratense,Trifolium pratense,7,5,5,7,6,1,0
+457,Trifolium montanum,Trifolium montanum,Trifolium montanum,7,6,3,8,3,0,0
+458,Trifolium repens,Trifolium repens,Trifolium repens,7,5,5,6,6,1,0
+459,Trisetum flavescens,Trisetum flavescens,Trisetum flavescens,7,5,5,6,5,0,0
+460,Urtica dioica,Urtica dioica,Urtica dioica,5,5,6,7,9,1,0
+461,Valeriana officinalis agg.,Valeriana officinalis agg.,Valeriana officinalis agg.,7,5,6,7,6,1,0
+462,Valerianella locusta,Valerianella locusta,Valerianella locusta,7,6,4,7,6,0,0
+463,Valerianella sp.,Valerianella sp.,NA,NA,NA,NA,NA,NA,NA,0
+464,Verbascum cf. chaixii,Verbascum chaixii,Verbascum chaixii,7,6,3,7,5,0,0
+465,Verbascum cf. lychnitis,Verbascum lychnitis,Verbascum lychnitis,7,6,3,7,5,0,0
+466,Verbascum chaixii,Verbascum chaixii,Verbascum chaixii,7,6,3,7,5,0,0
+467,Verbascum lychnitis,Verbascum lychnitis,Verbascum lychnitis,7,6,3,7,5,0,0
+468,Verbascum phoeniceum,Verbascum phoeniceum,Verbascum phoeniceum,8,7,3,7,3,0,0
+469,Verbascum sp.,Verbascum sp.,NA,NA,NA,NA,NA,NA,NA,0
+470,Veronica arvensis,Veronica arvensis,Veronica arvensis,7,6,5,6,6,0,0
+471,Veronica austriaca,Veronica austriaca,Veronica austriaca,8,7,3,8,3,0,0
+472,Veronica chamaedrys agg.,Veronica chamaedrys agg.,Veronica chamaedrys agg.,6,5,5,7,6,0,0
+473,Veronica polita,Veronica polita,Veronica polita,7,6,4,7,7,0,0
+474,Veronica prostrata,Veronica prostrata,Veronica prostrata,8,7,2,8,3,0,0
+475,Veronica spicata,Veronica spicata,Veronica spicata,7,6,3,7,2,0,0
+476,Veronica teucrium,Veronica teucrium,Veronica teucrium,7,6,3,7,4,0,0
+477,Veronica verna,Veronica verna agg.,Veronica verna agg.,8,7,2,4,2,0,0
+478,Veronica verna agg.,Veronica verna agg.,Veronica verna agg.,8,7,2,4,2,0,0
+479,Veronica vindobonensis,Veronica chamaedrys agg.,Veronica chamaedrys agg.,6,5,5,7,6,0,0
+480,Viburnum lantana,Viburnum lantana,Viburnum lantana,7,7,4,7,5,0,1
+481,Viburnum opulus,Viburnum opulus,Viburnum opulus,6,5,6,7,6,0,1
+482,Vicia angustifolia,Vicia angustifolia,Vicia angustifolia,7,6,4,5,5,0,0
+483,Vicia cf. angustifolia,Vicia angustifolia,Vicia angustifolia,7,6,4,5,5,0,0
+484,Vicia cracca,Vicia cracca,Vicia cracca,7,5,5,6,5,1,0
+485,Vicia hirsuta,Vicia hirsuta,Vicia hirsuta,7,6,4,5,5,0,0
+486,Vicia lathyroides,Vicia lathyroides,Vicia lathyroides,8,7,3,5,3,0,0
+487,Vicia tenuifolia,Vicia tenuifolia,Vicia tenuifolia,7,6,4,8,4,0,0
+488,Vicia tetrasperma,Vicia tetrasperma,Vicia tetrasperma,7,6,4,5,5,0,0
+489,Vincetoxicum hirundinaria,Vincetoxicum hirundinaria,Vincetoxicum hirundinaria,6,6,3,7,3,0,0
+490,Viola ambigua,Viola ambigua,Viola ambigua,7,7,3,8,3,0,0
+491,Viola arvensis,Viola arvensis,Viola arvensis,7,5,5,6,6,0,0
+492,Viola cf. ambigua,Viola ambigua,Viola ambigua,7,7,3,8,3,0,0
+493,Viola cf. arvensis,Viola arvensis,Viola arvensis,7,5,5,6,6,0,0
+494,Viola cf. riviniana,Viola riviniana agg.,Viola riviniana agg.,3,5,5,7,6,0,0
+495,Viola cf. rupestris,Viola rupestris,Viola rupestris,7,6,3,8,2,0,0
+496,Viola cf. suavis,Viola suavis,Viola suavis,6,7,5,7,6,0,0
+497,Viola hirta,Viola hirta,Viola hirta,6,5,3,8,3,0,0
+498,Viola odorata,Viola odorata,Viola odorata,5,6,5,7,7,0,0
+499,Viola riviniana agg.,Viola riviniana agg.,Viola riviniana agg.,3,5,5,7,6,0,0
+500,Viola rupestris,Viola rupestris,Viola rupestris,7,6,3,8,2,0,0
+501,Viola sp.,Viola sp.,NA,NA,NA,NA,NA,NA,NA,0
+502,Viola tricolor,Viola tricolor,Viola tricolor,7,5,4,4,5,0,0
+503,Viscaria vulgaris,Viscaria vulgaris,Viscaria vulgaris,7,6,3,4,3,0,0
