@@ -5,10 +5,12 @@ Our study aims to assess the effects of long-term mosaic mowing, low-intensity m
 
 * Grid of boxplots:
   - Species richness
-  - Number of endangered species
+  - Number of endangered species (done)
   - Diversity index (to show uneven communities)
-  - Ecological Indicator Values to test for mesophilization and nutrification
+  - Ecological Indicator Values to test for mesophilization and nutrification (done)
 
 * Multivariate model:
   - species ~ mowing, displaying species. Subset 1:1 set of data to have correct comparison.
   - species ~ mowing * mosaic (problem with mosaics unbalanced dataset - too little mosaics from Dáša's area)
+  - expansive species
+  - invasive species
