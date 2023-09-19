@@ -46,22 +46,23 @@ read_delim(r'(data/seceni-releves230823.tsv)') |>
   group_by(releve.n, species) |>
   summarise(cover = sum(cover)) |>
   mutate(cover = as.numeric(cover)) |>
-  pivot_wider(names_from = species, values_from = cover, values_fill = 0)  -> spe_matrix
+  pivot_wider(names_from = species, values_from = cover, values_fill = 0) |>
+  as.data.frame() -> spe_matrix
 
 # preparing table with diversity indices
 releve.n <- spe_matrix$releve.n
-rownames(spe_matrix) <- spe_matrix[,1]
-spe_matrix$releve.n = NULL
-div_shannon = diversity(spe_matrix, index = "shannon")
-div_simpson = diversity(spe_matrix, index = "simpson")
+rownames(spe_matrix) <- spe_matrix[, 1]
+spe_matrix <- spe_matrix |> select(-releve.n)
+div_shannon <- diversity(spe_matrix, index = "shannon")
+div_simpson <- diversity(spe_matrix, index = "simpson")
+
 plots_num <- read_delim(r'(data/seceni-headers230915.tsv)') |>
   filter(area == 25) |>
   select(plot_ID, releve.n) |>
-  mutate(releve.n = as.numeric(releve.n)) 
-spe_div <- data.frame(releve.n, div_shannon, div_simpson) |>
+  mutate(releve.n = as.numeric(releve.n))
+spe_div <- tibble(releve.n, div_shannon, div_simpson) |>
   left_join(plots_num) |>
   select(-releve.n)
-
 
 meta |>
   group_by(plot_ID) |>
@@ -78,26 +79,42 @@ env <- read_delim(r'(data/seceni-headers230915.tsv)') |>
 
 # plotting
 # create new labels for plot facet
-new_labels <- c("cover_e1" = "Cover herb", "cover_e0" = "Cover moss","cover_litter" = "Cover litter","S" = "Species richness","div_shannon"= "Shannon index","div_simpson" = "Simpson index", "woody_plant" = "Woody species (number)", "woody_cover" = "Woody species (cover)","endg" = "Rare species (IUCN)","Light" = "Light (EIV)","Moisture" = "Moisture (EIV)","Nutrients" = "Nutrients (EIV)")
+new_labels <- c("cover_e1" = "Cover herb", "cover_e0" = "Cover moss", "cover_litter" = "Cover litter", "S" = "Species richness", "div_shannon" = "Shannon index", "div_simpson" = "Simpson index", "woody_plant" = "Woody species (number)", "woody_cover" = "Woody species (cover)", "endg" = "Rare species (IUCN)", "Light" = "Light (EIV)", "Moisture" = "Moisture (EIV)", "Nutrients" = "Nutrients (EIV)")
 
 stats_to_look |>
   left_join(read_delim(r'(data/seceni-headers230915.tsv)')  |>
-  mutate(area = as.numeric(area)) |>
-  filter(area == 25) |>
-  select(plot_ID, cover_litter, cover_e1, cover_e0)) |>
+              mutate(area = as.numeric(area)) |>
+              filter(area == 25) |>
+              select(plot_ID, cover_litter, cover_e1, cover_e0)) |>
   left_join(env |> select(plot_ID, mowing2)) |>
   pivot_longer(c(Light:cover_e0)) |>
-  transform(name=factor(name,levels=c("cover_e1","cover_e0","cover_litter","S","div_shannon","div_simpson","woody_plant", "woody_cover","endg","Light","Moisture","Nutrients"))) |>
+  transform(name = factor(name, levels = c("cover_e1", "cover_e0", "cover_litter", "S", "div_shannon", "div_simpson",
+                                           "woody_plant", "woody_cover", "endg", "Light", "Moisture", "Nutrients"))) ->
+  data_to_plot
+
+data_to_plot |>
+  mutate(mowing2 = factor(mowing2, levels = c('abandoned',
+                                              'mosaic_mowing',
+                                              'mowing'),
+                          labels = c('Abandonment',
+                                     'Mosaic mowing',
+                                     'Regular mowing'))) |>
   ggplot(aes(mowing2, value)) +
   geom_boxplot(aes(fill = mowing2), show.legend = F) +
   geom_point() +
   stat_compare_means(aes(label = after_stat(p.signif)),
-                     ref.group = "mowing") +
-  facet_wrap(~name, scales = 'free', labeller = labeller(name = new_labels)) +
+                      method = 't.test',
+                     ref.group = "Regular mowing") +
+  facet_wrap(~name, scales = 'free_x',
+             ncol = 3,
+             labeller = labeller(name = new_labels)) +
+  scale_fill_manual(values = c('#C8C1AB', 'gold', '#54AB3C')) +
   coord_flip() +
   theme_bw() +
   theme(strip.background = element_blank(),
         strip.text = element_text(hjust = 0, face = 'bold', size = 16),
-  axis.title = element_blank())
+        axis.title = element_blank(),
+  text = element_text(size = 14))
 
-ggsave('boxplots.png', height = 8, width = 15)
+
+ggsave('boxplots.png', height = 9, width = 10)
