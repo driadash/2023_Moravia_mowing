@@ -31,30 +31,44 @@ meta |>
   group_by(plot_ID) |>
   summarise_at(c('endg', 'woody_plant', 'woody_cover'), sum, na.rm = T) -> meta1
 
-read_delim(r'(data/seceni-releves230823.tsv)') |>
-  filter(area == 25) |>
-  select(num = releve.n, species, cover) |>
-  group_by(num, species) |>
-  summarise(cover = sum(cover)) |>
-  mutate(cover = as.numeric(cover)) |>
-  pivot_wider(names_from = species, values_from = cover, values_fill = 0) -> spe_matrix
-
+# count species richness (S) for plots
 read_delim(r'(data/seceni-releves230823.tsv)') |>
   filter(area == 25) |>
   select(plot_ID, species) |>
   distinct() |>
   group_by(plot_ID) |>
-  summarise(S = n_distinct(species)) |>
-  mutate(
-    div_shannon = diversity(spe_matrix, index = "shannon"),
-    div_simpson = diversity(spe_matrix, index = "simpson")
-) -> spe_div
+  summarise(S = n_distinct(species)) -> spe_rich
+
+#prepare species matrix for calculations of diversity indices
+read_delim(r'(data/seceni-releves230823.tsv)') |>
+  filter(area == 25) |>
+  select(releve.n, species, cover) |>
+  group_by(releve.n, species) |>
+  summarise(cover = sum(cover)) |>
+  mutate(cover = as.numeric(cover)) |>
+  pivot_wider(names_from = species, values_from = cover, values_fill = 0)  -> spe_matrix
+
+# preparing table with diversity indices
+releve.n <- spe_matrix$releve.n
+rownames(spe_matrix) <- spe_matrix[,1]
+spe_matrix$releve.n = NULL
+div_shannon = diversity(spe_matrix, index = "shannon")
+div_simpson = diversity(spe_matrix, index = "simpson")
+plots_num <- read_delim(r'(data/seceni-headers230915.tsv)') |>
+  filter(area == 25) |>
+  select(plot_ID, releve.n) |>
+  mutate(releve.n = as.numeric(releve.n)) 
+spe_div <- data.frame(releve.n, div_shannon, div_simpson) |>
+  left_join(plots_num) |>
+  select(-releve.n)
+
 
 meta |>
   group_by(plot_ID) |>
   summarise_at(c('Light', 'Moisture', 'Nutrients'), mean, na.rm = T) |>
   left_join(meta1) |>
-  left_join(spe_div) -> stats_to_look
+  left_join(spe_div) |>
+  left_join(spe_rich) -> stats_to_look
 
 env <- read_delim(r'(data/seceni-headers230915.tsv)') |>
   mutate(mowing2 = factor(paste0(mowing, mosaic),
@@ -64,7 +78,9 @@ env <- read_delim(r'(data/seceni-headers230915.tsv)') |>
 
 
 stats_to_look |>
-  left_join(read_delim(r'(data/seceni-headers230915.tsv)') |>
+  left_join(read_delim(r'(data/seceni-headers230915.tsv)')  |>
+  mutate(area = as.numeric(area)) |>
+  filter(area == 25) |>
   select(plot_ID, cover_litter, cover_e1, cover_e0)) |>
   left_join(env |> select(plot_ID, mowing2)) |>
   pivot_longer(c(Light:cover_e0)) |>
