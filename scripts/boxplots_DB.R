@@ -76,7 +76,6 @@ env <- read_delim(r'(data/seceni-headers230915.tsv)') |>
                           levels = c('00', '11', '10'),
                           labels = c('abandoned', 'mosaic_mowing', 'mowing')))
 
-
 # plotting
 # create new labels for plot facet
 new_labels <- c("cover_e1" = "Cover herb", "cover_e0" = "Cover moss", "cover_litter" = "Cover litter", "S" = "Species richness", "div_shannon" = "Shannon index", "div_simpson" = "Simpson index", "woody_plant" = "Woody species (number)", "woody_cover" = "Woody species (cover)", "endg" = "Rare species (IUCN)", "Light" = "Light (EIV)", "Moisture" = "Moisture (EIV)", "Nutrients" = "Nutrients (EIV)")
@@ -108,7 +107,7 @@ data_to_plot |>
   facet_wrap(~name, scales = 'free_x',
              ncol = 3,
              labeller = labeller(name = new_labels)) +
-  scale_fill_manual(values = c('#C8C1AB', 'gold', '#54AB3C')) +
+  scale_fill_manual(values = c('#C8C1AB', '#fba53b', '#54AB3C')) +
   coord_flip() +
   theme_bw() +
   theme(strip.background = element_blank(),
