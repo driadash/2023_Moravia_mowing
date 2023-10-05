@@ -24,6 +24,8 @@ read_delim(r'(data/seceni-releves230823.tsv)') |>
   summarise(cover = sum(cover)) |>
   left_join(species_data1) -> meta
 
+
+
 meta |>
   select(plot_ID, species_corrected, IUCN, woody_plant, cover) |>
   mutate(endg = as.numeric(ifelse(IUCN %in% c('EN', 'NT', 'VU', 'CR'), 1, 0)),
@@ -115,5 +117,7 @@ data_to_plot |>
         axis.title = element_blank(),
   text = element_text(size = 14))
 
+env |>
+  summarise(n(), .by = mowing2)
 
 ggsave('boxplots.png', height = 9, width = 10)
