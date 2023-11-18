@@ -3,6 +3,7 @@ library(tidyverse)
 library(readxl)
 library(vegan)
 
+
 redlisted <- read_xlsx(r'(data/ohrozeni-ochrana.xlsx)') |>
   select(taxon_pladias = taxon, IUCN) |>
   filter(IUCN != '-')
@@ -23,8 +24,6 @@ read_delim(r'(data/seceni-releves230823.tsv)') |>
   group_by(plot_ID, species_corrected) |>
   summarise(cover = sum(cover)) |>
   left_join(species_data1) -> meta
-
-
 
 meta |>
   select(plot_ID, species_corrected, IUCN, woody_plant, cover) |>
