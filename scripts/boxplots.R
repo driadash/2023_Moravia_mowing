@@ -1,4 +1,5 @@
 Sys.setlocale("LC_ALL", "de_DE.UTF-8")
+library(writexl)
 library(ggforce)
 library(ggpubr)
 library(tidyverse)
@@ -36,6 +37,17 @@ species <- read_xlsx(r'(C:/Users/krystof/OneDrive - MUNI/2023_Moravia-mowing/dat
   left_join(read_csv('vyznamne.csv'))
 
 species |> write_csv('species_ready.csv')
+
+read_csv('species_ready.csv') |>
+  left_join(head |> select(plot_ID, site_name)) |>
+  group_by(taxon_ordination, IUCN) |>
+  summarise(n = n(),
+            lok = paste0(site_name, collapse = ', ')) |>
+  mutate(IUCN = factor(IUCN, levels = c('CR', 'EN', 'VU', 'NT'))) |>
+  drop_na() |>
+  arrange(IUCN) |>
+  write_xlsx('outputs/ohrozene_kusy.xlsx')
+
 
 species$habitat
 
@@ -97,6 +109,7 @@ stats_all |>
   pivot_longer(-c(expert_assessment, plot_ID)) |>
   mutate(name = factor(name, levels = diverzita$level, labels = diverzita$label)) |>
   drop_na() |>
+  #left_join(head |> select(plot_ID, habitat)) |>
   ggplot(aes(expert_assessment, value)) +
   geom_boxplot(aes(fill = expert_assessment), show.legend = F, notch = T, outlier.color = NA) +
   scale_fill_manual(values = c('#3879e0', 'gold', '#0dd67f')) +
@@ -105,13 +118,14 @@ stats_all |>
                      colour = 'red',
                      ref.group = "pravidelně\nkoseno") +
   facet_wrap(~name, scales = 'free', ncol = 2) +
+  #facet_grid(habitat~name, scales = 'free') +
   coord_flip() +
   theme_bw() +
   theme(strip.background = element_blank(),
         strip.text = element_text(hjust = 0, face = 'bold', size = 16),
         axis.title = element_blank())
 
-ggsave('outputs//boxplots_diverzita.png', height = 15, width = 10)
+ggsave('outputs//boxplots_diverzita.png', height = 12, width = 10)
 
 stats_all |>
   mutate(woody_cover = log1p(woody_cover)) |>
@@ -127,13 +141,14 @@ stats_all |>
                      colour = 'red',
                      ref.group = "pravidelně\nkoseno") +
   facet_wrap(~name, scales = 'free', ncol = 2) +
+  facet_grid(habitat~name, scales = 'free') +
   coord_flip() +
   theme_bw() +
   theme(strip.background = element_blank(),
         strip.text = element_text(hjust = 0, face = 'bold', size = 16),
         axis.title = element_blank())
 
-ggsave('outputs//boxplots_struktura.png', height = 15, width = 10)
+ggsave('outputs//boxplots_struktura.png', height = 12, width = 10)
 
 
 summary(lm(S ~ cover_litter * cover_e1, data = stats_all))
@@ -143,3 +158,11 @@ stats_all |>
   geom_point() +
   geom_smooth(method = 'lm') +
   stat_cor()
+
+stats_all |>
+  mutate(expert_assessment = substr(expert_assessment, 1, 5)) |>
+  group_by(expert_assessment) |>
+  summarise_if(is.numeric, mean, na.rm = T) |> pivot_longer(-1) |>
+  pivot_wider(names_from = expert_assessment) |>
+  mutate(rat  = 1-(nepra/pravi)) |>
+  mutate(rat_nekos  = 1-(nekos/pravi))
