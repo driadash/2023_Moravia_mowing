@@ -9,8 +9,6 @@ library(tidyverse)
 library(vegan)
 library(readxl)
 
-list.files(r'(C:/Users/krystof/OneDrive - MUNI/2023_Moravia-mowing/data)')
-head |> filter(site_ID == 'ENV48')
 read_xlsx(r'(C:/Users/krystof/OneDrive - MUNI/2023_Moravia-mowing/data/headers.xlsx)', 3) |>
   mutate(authorities_assessment = factor(authorities_assessment,
                                          levels = c('abandoned', 'irregular mosaic', 'irregular mowing',
@@ -28,6 +26,7 @@ read_xlsx(r'(C:/Users/krystof/OneDrive - MUNI/2023_Moravia-mowing/data/headers.x
 head <- read_xlsx(r'(C:/Users/krystof/OneDrive - MUNI/2023_Moravia-mowing/data/headers.xlsx)') |>
   select(-expert_assessment, -authorities_assessment, -grazing) |>
   left_join(hedau)
+
 species_data <- read_xlsx(r'(C:/Users/krystof/OneDrive - MUNI/2023_Moravia-mowing/data/species_joined.xlsx)')
 species <- read_xlsx(r'(C:/Users/krystof/OneDrive - MUNI/2023_Moravia-mowing/data/species.xlsx)') |>
   filter(area == 25) |>
@@ -88,7 +87,7 @@ scores(model, display = 'sp') |>
   mutate(taxon_ordination = paste0(word(taxon_ordination, 1) |> substr(1, 3),
                                    '.',
                                    word(taxon_ordination, 2) |> substr(1, 3))) |>
-  mutate(IUCN = factor(IUCN, levels = c('CR', 'EN', 'VU', 'NT'))) |>
+  mutate(IUCN = factor(IUCN, levels = c('CR', 'EN', 'VU', 'NT', 'LC'))) |>
   filter(count >= 5) |>
   slice_max(r2, n = 80) |>
   arrange(desc(IUCN)) |>
@@ -106,7 +105,7 @@ scores(model, display = 'sp') |>
                   segment.colour = NA) + #
   scale_x_continuous(expand = c(.1, .1)) +
   scale_y_continuous(expand = c(.1, .1)) +
-  scale_colour_manual(values = c('red', 'blue', '#CE7E00', '#1B6F0E'), drop = F) +
+  scale_colour_manual(values = c('red', 'blue', '#CE7E00', '#1B6F0E', '#f403fc'), drop = F) +
   theme_bw() +
   theme(legend.position = c(0, 0),
         legend.justification = c(0, 0),
@@ -132,7 +131,7 @@ scores(model1, display = 'sp') |>
   mutate(taxon_ordination = paste0(word(taxon_ordination, 1) |> substr(1, 3),
                                    '.',
                                    word(taxon_ordination, 2) |> substr(1, 3))) |>
-  mutate(IUCN = factor(IUCN, levels = c('CR', 'EN', 'VU', 'NT'))) |>
+  mutate(IUCN = factor(IUCN, levels = c('CR', 'EN', 'VU', 'NT', 'LC'))) |>
   filter(count >= 5) |>
   slice_max(r2, n = 60) |>
   arrange(desc(IUCN)) |>
@@ -147,7 +146,7 @@ scores(model1, display = 'sp') |>
                arrow = arrow(length = unit(.1, 'inches')), alpha = .4) +
   geom_text_repel(aes(colour = IUCN, label = taxon_ordination), fontface = 'bold.italic', max.overlaps = Inf,
                   segment.colour = NA) + #
-  scale_colour_manual(values = c('red', 'blue', '#CE7E00', '#1B6F0E'), drop = F) +
+  scale_colour_manual(values = c('red', 'blue', '#CE7E00', '#1B6F0E', '#f403fc'), drop = F) +
   scale_x_continuous(expand = c(.1, .1)) +
   scale_y_continuous(expand = c(.1, .1)) +
   theme_bw() +

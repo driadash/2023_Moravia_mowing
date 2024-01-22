@@ -38,22 +38,12 @@ species <- read_xlsx(r'(C:/Users/krystof/OneDrive - MUNI/2023_Moravia-mowing/dat
 
 species |> write_csv('species_ready.csv')
 
-read_csv('species_ready.csv') |>
-  left_join(head |> select(plot_ID, site_name)) |>
-  group_by(taxon_ordination, IUCN) |>
-  summarise(n = n(),
-            lok = paste0(site_name, collapse = ', ')) |>
-  mutate(IUCN = factor(IUCN, levels = c('CR', 'EN', 'VU', 'NT'))) |>
-  drop_na() |>
-  arrange(IUCN) |>
-  write_xlsx('outputs/ohrozene_kusy.xlsx')
-
-
-species$habitat
-
+species$expanzni
 species |>
-  mutate(endg = as.numeric(ifelse(IUCN %in% c('EN', 'NT', 'VU', 'CR'), 1, 0)),
-         woody_cover = woody_plant * cover) |>
+  mutate(expanzni = as.logical(replace_na(expanzni, 0)),
+    endg = as.numeric(ifelse(IUCN %in% c('EN', 'NT', 'VU', 'CR'), 1, 0)),
+         woody_cover = woody_plant * cover,
+  expanzni = (expanzni + invasive)*cover) |>
   group_by(plot_ID) |>
   summarise_at(c('endg', 'woody_plant', 'woody_cover', 'bazalni', 'diagnosticke', 'specificke', 'expanzni'),
                sum, na.rm = T) -> stats1
@@ -76,8 +66,14 @@ species |>
   left_join(stats2) |>
   left_join(head |>
               select(plot_ID, cover_e1, cover_e0, cover_litter, height_mean_e1, expert_assessment)) |>
-  relocate(expert_assessment) -> stats_all
+  relocate(expert_assessment) |> filter(expert_assessment != 'nekoseno') -> stats_all
 stats_all$evenness
+
+
+lm(log(S) ~ poly(cover_e0, 1), data = stats_all)
+stats_all |> ggplot(aes(S, cover_e0)) +
+  geom_point() +
+  geom_smooth(method = 'lm')
 
 diverzita <- tribble(~level, ~label,
                      "S", "Počet druhů",
@@ -86,7 +82,7 @@ diverzita <- tribble(~level, ~label,
                      "div_shannon", "Shannonův index diverzity",
                      'evenness', "Ekvitabilita",
 
-                     'expanzni', 'Pokryvnost expanzních druhů (%, log)',
+                     'expanzni', 'Pokryvnost invazních a expanzních druhů (%)',
                      'diagnosticke', 'Počet diagnostických druhů',
 
                      'bazalni', 'Počet bazálních druhů',
