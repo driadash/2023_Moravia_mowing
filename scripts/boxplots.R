@@ -6,8 +6,8 @@ library(tidyverse)
 library(vegan)
 library(readxl)
 
-list.files(r'(C:/Users/krystof/OneDrive - MUNI/2023_Moravia-mowing/data)')
-headau <- read_xlsx(r'(C:/Users/krystof/OneDrive - MUNI/2023_Moravia-mowing/data/headers.xlsx)', 2) |>
+# list.files(r'(C:/Users/krystof/OneDrive - MUNI/2023_Moravia-mowing/data)')
+headau <- read_xlsx(r'(data/headers.xlsx)', 2) |>
   mutate(authorities = factor(paste(mowing_frequency, mowing_type),
                               levels = c('regular mowing',
                                          'regular mosaic',
@@ -19,12 +19,26 @@ headau <- read_xlsx(r'(C:/Users/krystof/OneDrive - MUNI/2023_Moravia-mowing/data
                                          'nepravidelně koseno',
                                          'nepravidelně koseno', 'nekoseno')))
 
-head <- read_xlsx(r'(C:/Users/krystof/OneDrive - MUNI/2023_Moravia-mowing/data/headers.xlsx)') |>
+#filter sites
+sites_filtr <- read_xlsx(r'(data/headers.xlsx)') |>
+  select (plot_ID, habitat) |> 
+  filter(habitat %in% c("T34", "T33/T34", "T35/T34"), .keep_all = TRUE) |> 
+  select(-habitat) |> 
+  mutate (habitat_select = "yes")
+
+head <- read_xlsx(r'(data/headers.xlsx)') |>
   mutate(expert_assessment = factor(expert_assessment,
                                     levels = c('abandoned', 'irregular', 'regular'),
-                                    labels = c('nekoseno', 'nepravidelně\nkoseno', 'pravidelně\nkoseno')))
-species_data <- read_xlsx(r'(C:/Users/krystof/OneDrive - MUNI/2023_Moravia-mowing/data/species_joined.xlsx)')
-species <- read_xlsx(r'(C:/Users/krystof/OneDrive - MUNI/2023_Moravia-mowing/data/species.xlsx)') |>
+                                    labels = c('nekoseno', 'nepravidelně\nkoseno', 'pravidelně\nkoseno'))) |> 
+  left_join(sites_filtr, by = "plot_ID") |> 
+  filter(habitat_select == "yes", .keep_all = TRUE) |> 
+  select(-habitat_select)
+
+species_data <- read_xlsx(r'(data/species_joined.xlsx)')
+species <- read_xlsx(r'(data/species.xlsx)') |>
+  left_join(sites_filtr, by = "plot_ID") |> 
+  filter(habitat_select == "yes", .keep_all = TRUE) |> 
+  select(-habitat_select) |> 
   filter(area == 25) |>
   select(plot_ID, layer, taxon_original = species, cover) |>
   left_join(species_data |> select(taxon_original, taxon_ordination)) |>

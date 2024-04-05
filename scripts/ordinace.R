@@ -9,7 +9,7 @@ library(tidyverse)
 library(vegan)
 library(readxl)
 
-read_xlsx(r'(C:/Users/krystof/OneDrive - MUNI/2023_Moravia-mowing/data/headers.xlsx)', 3) |>
+read_xlsx(r'(data/headers.xlsx)', 3) |>
   mutate(authorities_assessment = factor(authorities_assessment,
                                          levels = c('abandoned', 'irregular mosaic', 'irregular mowing',
                                                     'regular mosaic', 'regular mowing'),
@@ -23,16 +23,29 @@ read_xlsx(r'(C:/Users/krystof/OneDrive - MUNI/2023_Moravia-mowing/data/headers.x
   mutate(grazing = replace_na(as.logical(grazing), F))|>
   select(plot_ID, authorities_assessment, expert_assessment, grazing) -> hedau
 
-head <- read_xlsx(r'(C:/Users/krystof/OneDrive - MUNI/2023_Moravia-mowing/data/headers.xlsx)') |>
-  select(-expert_assessment, -authorities_assessment, -grazing) |>
-  left_join(hedau)
+#filter sites
+sites_filtr <- read_xlsx(r'(data/headers.xlsx)') |>
+  select (plot_ID, habitat) |> 
+  filter(habitat %in% c("T34", "T33/T34", "T35/T34"), .keep_all = TRUE) |> 
+  select(-habitat) |> 
+  mutate (habitat_select = "yes")
 
-species_data <- read_xlsx(r'(C:/Users/krystof/OneDrive - MUNI/2023_Moravia-mowing/data/species_joined.xlsx)')
-species <- read_xlsx(r'(C:/Users/krystof/OneDrive - MUNI/2023_Moravia-mowing/data/species.xlsx)') |>
+head <- read_xlsx(r'(data/headers.xlsx)') |>
+  select(-expert_assessment, -grazing) |>
+  left_join(hedau) |> 
+  left_join(sites_filtr, by = "plot_ID") |> 
+  filter(habitat_select == "yes", .keep_all = TRUE) |> 
+  select(-habitat_select)
+
+species_data <- read_xlsx(r'(data/species_joined.xlsx)')
+species <- read_xlsx(r'(data/species.xlsx)') |>
   filter(area == 25) |>
   select(plot_ID, layer, taxon_original = species, cover) |>
   left_join(species_data |> select(taxon_original, taxon_ordination)) |>
   select(plot_ID, taxon_original, taxon_ordination, cover) |>
+  left_join(sites_filtr, by = "plot_ID") |> 
+  filter(habitat_select == "yes", .keep_all = TRUE) |> 
+  select(-habitat_select) |> 
   group_by(plot_ID, taxon_ordination) |>
   summarise(cover = sum(cover)) |>
   ungroup()
