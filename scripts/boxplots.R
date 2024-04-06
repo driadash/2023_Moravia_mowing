@@ -6,18 +6,11 @@ library(tidyverse)
 library(vegan)
 library(readxl)
 
+#check nomenclature match - zero values in diagnostic and basal spe are suspecious
+# check one plot with very low shannon and evenness
+
+
 # list.files(r'(C:/Users/krystof/OneDrive - MUNI/2023_Moravia-mowing/data)')
-headau <- read_xlsx(r'(data/headers.xlsx)', 2) |>
-  mutate(authorities = factor(paste(mowing_frequency, mowing_type),
-                              levels = c('regular mowing',
-                                         'regular mosaic',
-                                         'irregular mowing',
-                                         'irregular mosaic',
-                                         'abandoned abandoned'),
-                              labels = c('koseno',
-                                         'mozaika',
-                                         'nepravidelně koseno',
-                                         'nepravidelně koseno', 'nekoseno')))
 
 #filter sites
 sites_filtr <- read_xlsx(r'(data/headers.xlsx)') |>
@@ -33,6 +26,8 @@ head <- read_xlsx(r'(data/headers.xlsx)') |>
   left_join(sites_filtr, by = "plot_ID") |> 
   filter(habitat_select == "yes", .keep_all = TRUE) |> 
   select(-habitat_select)
+
+
 
 species_data <- read_xlsx(r'(data/species_joined.xlsx)')
 species <- read_xlsx(r'(data/species.xlsx)') |>
@@ -80,12 +75,18 @@ species |>
   left_join(stats2) |>
   left_join(head |>
               select(plot_ID, cover_e1, cover_e0, cover_litter, height_mean_e1, expert_assessment)) |>
-  relocate(expert_assessment) |> filter(expert_assessment != 'nekoseno') -> stats_all
+  relocate(expert_assessment) -> stats_all
 stats_all$evenness
 
+#filter(expert_assessment != 'nekoseno') 
 
 lm(log(S) ~ poly(cover_e0, 1), data = stats_all)
 stats_all |> ggplot(aes(S, cover_e0)) +
+  geom_point() +
+  geom_smooth(method = 'lm')
+
+lm(log(S) ~ poly(cover_litter, 1), data = stats_all)
+stats_all |> ggplot(aes(S, cover_litter)) +
   geom_point() +
   geom_smooth(method = 'lm')
 
@@ -151,7 +152,7 @@ stats_all |>
                      colour = 'red',
                      ref.group = "pravidelně\nkoseno") +
   facet_wrap(~name, scales = 'free', ncol = 2) +
-  facet_grid(habitat~name, scales = 'free') +
+#  facet_grid(habitat~name, scales = 'free') +
   coord_flip() +
   theme_bw() +
   theme(strip.background = element_blank(),
@@ -162,6 +163,8 @@ ggsave('outputs//boxplots_struktura.png', height = 12, width = 10)
 
 
 summary(lm(S ~ cover_litter * cover_e1, data = stats_all))
+
+stats_all 
 
 stats_all |>
   ggplot(aes(cover_litter, log1p(endg))) +
