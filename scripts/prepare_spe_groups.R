@@ -52,3 +52,5 @@ species2 |>
   summarise_at(c('endg', 'endg_cover', 'charact', 'charact_cover', 'exp', 'exp_cover',  'inv', 'inv_cover', 'woody', 'woody_cover', 'other', 'other_cover'),
                sum, na.rm = T) -> stats_spe_groups
 
+stats_spe_groups |> write_csv('stats_spe_groups.csv')
+
