@@ -38,7 +38,8 @@ species |>
          charact = replace_na(charact, 0),
          exp = as.integer(as.logical(native_expansive)),
          inv = as.integer(as.logical(invasive)),
-         other = as.integer(!(endg == 1 | charact == 1 | exp == 1 | inv == 1 | woody == 1))) -> species2
+         other = as.integer(!(endg == 1 | charact == 1 | exp == 1 | inv == 1 | woody == 1)),
+         all_sp = 1) -> species2
   
 
 species2 |>
@@ -47,19 +48,20 @@ species2 |>
          exp_cover = exp*cover,
          inv_cover = inv * cover,
          woody_cover = woody * cover,
-         other_cover = other * cover) |>
+         other_cover = other * cover,
+         all_cover = all_sp * cover) |>
   group_by(plot_ID) |>
-  summarise_at(c('endg', 'endg_cover', 'charact', 'charact_cover', 'exp', 'exp_cover',  'inv', 'inv_cover', 'woody', 'woody_cover', 'other', 'other_cover'),
+  summarise_at(c('endg', 'endg_cover', 'charact', 'charact_cover', 'exp', 'exp_cover',  'inv', 'inv_cover', 'woody', 'woody_cover', 'other', 'other_cover', 'all_sp', 'all_cover'),
                sum, na.rm = T) |> 
   left_join(head |> select(plot_ID, site_ID, expert_assessment)) -> stats_spe_groups
 
 stats_spe_groups |> 
-  select(plot_ID, site_ID, endg, charact, exp, inv, woody, other, management = expert_assessment) |> 
-  pivot_longer(cols = endg:other, names_to = "species_group", values_to = "species_number") -> spe_group_num
+  select(plot_ID, site_ID, endg, charact, exp, inv, woody, other, all = all_sp, management = expert_assessment) |> 
+  pivot_longer(cols = endg:all, names_to = "species_group", values_to = "species_number") -> spe_group_num
 
 stats_spe_groups |> 
-  select(plot_ID, site_ID, endg = endg_cover, charact = charact_cover, exp = exp_cover, inv = inv_cover, woody = woody_cover, other = other_cover, management = expert_assessment) |> 
-  pivot_longer(cols = endg:other, names_to = "species_group", values_to = "species_cover") -> spe_group_cov
+  select(plot_ID, site_ID, endg = endg_cover, charact = charact_cover, exp = exp_cover, inv = inv_cover, woody = woody_cover, other = other_cover, all = all_cover, management = expert_assessment) |> 
+  pivot_longer(cols = endg:all, names_to = "species_group", values_to = "species_cover") -> spe_group_cov
 
 ?pivot_longer
 
