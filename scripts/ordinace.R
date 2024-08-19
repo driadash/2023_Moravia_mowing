@@ -11,15 +11,16 @@ library(readxl)
 
 read_xlsx(r'(data/headers.xlsx)', 3) |>
   mutate(authorities_assessment = factor(authorities_assessment,
-                                         levels = c('abandoned', 'irregular mosaic', 'irregular mowing',
-                                                    'regular mosaic', 'regular mowing'),
-                                         labels = c('Nekoseno', 'Mozaika nebo\nnepravidelně\nkoseno',
-                                                    'Mozaika nebo\nnepravidelně\nkoseno',
-                                                    'Mozaika nebo\nnepravidelně\nkoseno',
-                                                    'Pravidelně\nKoseno')),
+                                         levels = c('abandoned', 'irregular mosaic', 'irregular mowing', 'regular mosaic', 'regular mowing'),
+                                         labels = c(
+                                           'Abandoned', 
+                                           'Mosaic or\nirregular\nmowing',
+                                           'Mosaic or\nirregular\nmowing',
+                                           'Mosaic or\nirregular\nmowing',
+                                           'Regular\nmowing')),
          expert_assessment = factor(expert_assessment,
                                     levels = c('abandoned', 'irregular', 'regular'),
-                                    labels = c('Nekoseno', 'Nepravidelně\nkoseno', 'Pravidelně\nkoseno'))) |>
+                                    labels = c('Abandoned', 'Irregular mowing', 'Regular mowing'))) |>
   mutate(grazing = replace_na(as.logical(grazing), F))|>
   select(plot_ID, authorities_assessment, expert_assessment, grazing) -> hedau
 
@@ -68,10 +69,10 @@ model <- capscale(sqrt(spe) ~ expert_assessment +
   Condition(grazing), data = head, method = 'bray', sqrt.dist = T)
 anova(model)
 
-model1 <- capscale(sqrt(spe[head$expert_assessment != 'Nekoseno',]) ~ expert_assessment +
+model1 <- capscale(sqrt(spe[head$expert_assessment != 'Abandoned',]) ~ expert_assessment +
   Condition(site_ID) +
   Condition(habitat) +
-  Condition(grazing), data = head[head$expert_assessment != 'Nekoseno',], method = 'bray', sqrt.dist = T)
+  Condition(grazing), data = head[head$expert_assessment != 'Abandoned',], method = 'bray', sqrt.dist = T)
 anova(model1)
 
 #' this we do not show
@@ -105,9 +106,9 @@ scores(model, display = 'sp') |>
   slice_max(r2, n = 80) |>
   arrange(desc(IUCN)) |>
   ggplot(aes(CAP1, CAP2)) +
-  geom_segment(data = tb1, aes(x = 0, y = 0, xend = CAP1, yend = CAP2, colour = name),
+  geom_segment(data = tb1, aes(x = 0, y = 0, xend = CAP1*1.2, yend = CAP2*1.2, colour = name),
                arrow = arrow(length = unit(.3, 'inches')), linewidth = 1.3, show.legend = F) +
-  geom_text(data = tb1, aes(label = name, colour = name, x = CAP1 * 1.08, y = CAP2 * 1.08), show.legend = F, size = 5,
+  geom_text(data = tb1, aes(label = name, colour = name, x = (CAP1*1.2+sign(CAP1)*0.06), y = (CAP2*1.2+sign(CAP2)*0.06)), show.legend = F, size = 5,
             fontface = 'bold') +
   scale_colour_manual(values = c('grey30', '#FF007F', '#44BBFF')) +
   ggnewscale::new_scale_colour() +
@@ -126,6 +127,8 @@ scores(model, display = 'sp') |>
 
 p1
 
+ggsave('outputs/ordination_all_240705.png', p1, height = 10, width = 10)
+
 scores(model1)$centroids |>
   as.data.frame() |>
   rownames_to_column('name') |>
@@ -136,8 +139,8 @@ scores(model1, display = 'sp') |>
   as.data.frame() |>
   rownames_to_column('taxon_ordination') |>
   as_tibble() |>
-  mutate(r2 = envfit(model1, spe[head$expert_assessment != 'Nekoseno',], permutations = 0)$vectors$r,
-         count = colSums(spe[head$expert_assessment != 'Nekoseno',]!=0)) |>
+  mutate(r2 = envfit(model1, spe[head$expert_assessment != 'Abandoned',], permutations = 0)$vectors$r,
+         count = colSums(spe[head$expert_assessment != 'Abandoned',]!=0)) |>
   left_join(species_data |>
               distinct(taxon_ordination, IUCN) |>
               drop_na()) |>
@@ -169,4 +172,4 @@ scores(model1, display = 'sp') |>
 
 m <- p1 / p2
 
-ggsave('outputs/ordination_3.png', m, height = 15, width = 10)
+ggsave('outputs/ordination_240705.png', m, height = 15, width = 10)
