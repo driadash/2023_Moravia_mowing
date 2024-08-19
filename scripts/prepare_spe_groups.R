@@ -10,7 +10,7 @@ sites_filtr <- read_xlsx(r'(data/headers.xlsx)') |>
 head <- read_xlsx(r'(data/headers.xlsx)') |>
   mutate(expert_assessment = factor(expert_assessment,
                                     levels = c('abandoned', 'irregular', 'regular'),
-                                    labels = c('abandoned', 'irregular\nmowing', 'regular\nmowing'))) |> 
+                                    labels = c('abandoned', 'irregular_mowing', 'regular_mowing'))) |> 
   left_join(sites_filtr, by = "plot_ID") |> 
   filter(habitat_select == "yes", .keep_all = TRUE) |> 
   select(-habitat_select)
@@ -50,7 +50,21 @@ species2 |>
          other_cover = other * cover) |>
   group_by(plot_ID) |>
   summarise_at(c('endg', 'endg_cover', 'charact', 'charact_cover', 'exp', 'exp_cover',  'inv', 'inv_cover', 'woody', 'woody_cover', 'other', 'other_cover'),
-               sum, na.rm = T) -> stats_spe_groups
+               sum, na.rm = T) |> 
+  left_join(head |> select(plot_ID, site_ID, expert_assessment)) -> stats_spe_groups
 
-stats_spe_groups |> write_csv('stats_spe_groups.csv')
+stats_spe_groups |> 
+  select(plot_ID, site_ID, endg, charact, exp, inv, woody, other, management = expert_assessment) |> 
+  pivot_longer(cols = endg:other, names_to = "species_group", values_to = "species_number") -> spe_group_num
+
+stats_spe_groups |> 
+  select(plot_ID, site_ID, endg = endg_cover, charact = charact_cover, exp = exp_cover, inv = inv_cover, woody = woody_cover, other = other_cover, management = expert_assessment) |> 
+  pivot_longer(cols = endg:other, names_to = "species_group", values_to = "species_cover") -> spe_group_cov
+
+?pivot_longer
+
+stats_spe_groups |> write_csv('stats_spe_groups.csv') 
+spe_group_num |> write_csv('spe_group_num.csv') 
+spe_group_cov |> write_csv('spe_group_cov.csv') 
+
 
