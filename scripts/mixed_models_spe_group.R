@@ -29,7 +29,7 @@ full_model_num <- lmer(species_number ~ management * species_group + (1 | site_I
 summary(full_model_num)
 
 
-# emmeans - Pairwise comparisons for management types and species groups (using cover)
+# emmeans - Pairwise comparisons for management types and species groups (using species NUMBER)
 
 emmeans(full_model_num, pairwise ~ management | species_group)
 emmeans(model1_num, pairwise ~ management | species_group)
